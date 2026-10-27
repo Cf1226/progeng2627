@@ -6,15 +6,18 @@ double powersum(double n, double x);
 
 int main()
 {
-    double x, n;
-    std::cin >> x >> n;
-    std::cout << "The sum of powers is: " << powersum(n, x) << std::endl;
+   std::cout << (powersum(1, 2) == 3) << std::endl;
+   std::cout << (powersum(10, 2) == 2047) << std::endl;
+   std::cout << (powersum(4, 5) == 781) << std::endl;
+   std::cout << (powersum(0, 2) == 1) << std::endl;
+   std::cout << (powersum(15, 1) == 16) << std::endl;
+
 }
 
 double powersum(double n, double x)
 {
     double y = 0;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i <= n; i++)
     {
         y += mypow(x, i);
     }
